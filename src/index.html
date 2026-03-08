@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="/favicon-dark.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="/favicon-light.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Animal Adoption is a platform where you can find pets, learn about them, and choose a new furry friend for your home."
+    />
+    
+    <title>Animal Adoption</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/hero/hero@1x.webp"
+      imagesrcset="./img/hero/hero@1x.webp 1x, ./img/hero/hero@2x.webp 2x"
+    />
+  </head>
+  <body>
+    <load src="./partials/header.html" />
+    <!-- Connecting svg images from sprite example: (all of them have "icon-" in front of their name)
+      icon-path="./img/sprite.svg#icon-company-Logo" -->
+
+    <main>
+      <!-- Loads the specified .html file -->
+      <load src="./partials/hero.html" />
+      <load src="./partials/pets_list.html" />
+      <load src="./partials/about_us.html" />
+      <load src="./partials/FAQ.html" />
+      <load src="./partials/success_stories.html" />
+    </main>
+
+    <load src="./partials/footer.html" />
+    <load src="./partials/mobile-menu.html" />
+    <load src="./partials/order.html" />
+    <load src="./partials/animal_detail.html" />
+
+    <script type="module" src="./js/modal-function.js"></script>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

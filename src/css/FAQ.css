@@ -1,0 +1,186 @@
+/* =========================
+   FAQ Title
+========================= */
+#faq .faq-accordion .ac,
+#faq .faq-accordion .ac-header,
+#faq .faq-accordion .ac-trigger,
+#faq .faq-accordion .ac-panel,
+#faq .faq-accordion .ac-content {
+  margin: 0;
+  padding: 0;
+} /* видалили стандартні відступи бібліотеки */
+
+#faq .faq-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 9.6vw, 36px);
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   FAQ Accordion Wrapper
+========================= */
+#faq .faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* відстань між секціями акордеону */
+}
+
+/* =========================
+   Accordion Item
+========================= */
+#faq .faq-accordion .ac {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #eee9e3;
+}
+
+/* =========================
+   Accordion Header
+========================= */
+#faq .faq-accordion .ac-header {
+  display: flex;
+  align-items: center;
+}
+
+#faq .faq-accordion .ac-header span {
+  flex: 1;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+/* =========================
+   Accordion Trigger
+========================= */
+#faq .faq-accordion .ac-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #eee9e3;
+  border-radius: 8px;
+  gap: 24px;
+  padding: 20px 24px;
+  transition: border-radius 0.1s ease;
+  font-size: 16px;
+  color: inherit;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#faq .faq-accordion .ac-trigger::after {
+  display: none;
+}
+
+#faq .faq-accordion .ac.is-active .ac-trigger {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* =========================
+   Accordion Panel
+========================= */
+#faq .faq-accordion .ac-panel {
+  background-color: #eee9e3;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* =========================
+   Accordion Content
+========================= */
+#faq .faq-question {
+  max-width: 768px;
+}
+
+#faq .faq-accordion .ac-content {
+  padding: 0 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  /* letter-spacing: -0.01em; */
+}
+
+#faq .faq-accordion .ac-content p:not(:last-child) {
+  margin-bottom: 16px;
+  /* 16px */
+}
+
+/* =========================
+   Lists in Accordion
+========================= */
+#faq .faq-accordion .accordion-list,
+#faq .faq-accordion .accordion-bullets {
+  padding-left: 22px;
+  margin-bottom: 12px;
+}
+
+#faq .faq-accordion .accordion-bullets {
+  list-style-type: disc;
+}
+
+#faq .faq-accordion ul li:not(:last-child),
+#faq .faq-accordion ol li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.mobile-br {
+  display: block;
+}
+
+/* =========================
+   Media Queries
+========================= */
+/* ---------- TABLET: from 768px ---------- */
+@media (min-width: 768px) {
+  /* .faq-wrapper {
+    max-width: 864px;
+    padding: 0 32px;
+  } */
+  .mobile-br {
+    display: none;
+  }
+
+  #faq .faq-title {
+    font-size: 36px;
+  }
+
+  #faq .faq-accordion .ac-content {
+    padding: 0 24px 24px;
+    font-size: 14px;
+  }
+  .ac-header {
+  }
+}
+
+/* ---------- DESKTOP: from 1440px ---------- */
+@media (min-width: 1440px) {
+  /* .faq-wrapper {
+    max-width: 1024px;
+    padding: 0 32px;
+  } */
+  .title-wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  #faq .faq-title {
+    font-size: 48px;
+  }
+
+  #faq .faq-accordion .ac-header span {
+    font-size: 18px;
+  }
+
+  #faq .faq-accordion .ac-content {
+    font-size: 16px;
+  }
+
+  #faq .faq-accordion {
+    max-width: 864px;
+    margin: 0 auto;
+  }
+}
