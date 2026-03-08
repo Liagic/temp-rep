@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="/temp-rep/favicon-dark.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="/temp-rep/favicon-dark.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="/temp-rep/favicon-light.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Animal Adoption is a platform where you can find pets, learn about them, and choose a new furry friend for your home."
+    />
+    
+    <title>Animal Adoption</title>
+    <link
+      rel="preload"
+      as="image"
+      href="/temp-rep/assets/hero@1x-DW7JCWY_.webp"
+      imagesrcset="./img/hero/hero@1x.webp 1x, ./img/hero/hero@2x.webp 2x"
+    />
+    <script type="module" crossorigin src="/temp-rep/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/temp-rep/assets/vendor-BW8fJWBm.js">
+    <link rel="stylesheet" crossorigin href="/temp-rep/assets/vendor-CbcKutFL.css">
+    <link rel="stylesheet" crossorigin href="/temp-rep/assets/index-p8kYUF7o.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="header_container">
+    <nav class="nav">
+      <div class="nav-menu">
+        <a class="nav-logo" href="./index.html" aria-label="Site logo">
+          <svg class="nav-logo-icon" width="160" height="70">
+            <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-company-Logo"></use>
+          </svg>
+        </a>    
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#about-us" class="menu-link">Про нас</a></li>
+          <li class="menu-item"><a href="#faq" class="menu-link">Часті запитання</a></li>
+          <li class="menu-item"><a href="#success-stories" class="menu-link">Історії успіху</a></li>
+        </ul>    
+      </div>
+
+      <div class="nav-burgermenu">
+        <svg class="nav-byrgermenu-icon" width="48px" height="48px">
+          <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-menu"></use>
+        </svg>
+      </div>
+      <div class="nav-button"><a href="#pets-list">Взяти друга</a></div>
+    </nav>
+  </div> 
+    <div class="mobile-modal">
+      <div class="mobile-modal-logo">
+        <a class="nav-logo" href="./index.html" aria-label="Site logo">
+          <svg class="nav-logo-icon" width="160" height="70">
+            <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-company-Logo"></use>
+          </svg>
+        </a> 
+        <svg class="mobile-close-icon" width="48px" height="48px">
+          <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-close"></use>
+        </svg>
+      </div>
+      <div class="mobile-modal-list">
+        <ul class="mobile-list">
+          <li class="mobile-menu-item"><a href="#pets-list" class="mobile-menu-link">Знайди друга</a></li>
+          <li class="mobile-menu-item"><a href="#about-us" class="mobile-menu-link">Про нас</a></li>
+          <li class="mobile-menu-item"><a href="#faq" class="mobile-menu-link">Часті запитання</a></li>
+          <li class="mobile-menu-item"><a href="#success-stories" class="mobile-menu-link">Історії успіху</a></li>
+        </ul> 
+      <div class="mobile-button"><a href="#pets-list">Взяти друга</a></div>
+      </div>
+    </div>
+</header>
+
+
+    <!-- Connecting svg images from sprite example: (all of them have "icon-" in front of their name)
+      icon-path="./img/sprite.svg#icon-company-Logo" -->
+
+    <main>
+      <!-- Loads the specified .html file -->
+      <section class="hero-section" id="hero">
+  <div class="container hero-container">
+    <h1 class="hero-title">
+      Кожне життя має значення. Знайди свого вірного друга
+    </h1>
+    <p class="hero-text">
+      Сотні котиків та собачок у притулку Хатинка Лапок чекають на свою родину.
+      Подаруйте їм дім.
+    </p>
+    <a class="hero-link hero-btn" href="#success-stories">Подивитись історії</a>
+  </div>
+</section>
+
+      <section class="our-pets" id="pets-list">
+  <div class="container our-pets-container">
+    <h2 class="our-pets-title">Наші хвостики</h2>
+    <p class="our-pets-additional-text">
+      Вони дуже чекають на знайомство з вами
+    </p>
+    <ul class="our-pets-categories"></ul>
+
+    <ul class="our-pets-list"></ul>
+    <div class="loader"></div>
+    <button
+      class="our-pets-pagination-btn is-hidden"
+      id="pets-pagination"
+      type="button"
+      aria-label="Завантажити більше домашніх улюбленців"
+    >
+      Показати більше
+    </button>
+  </div>
+</section>
+
+      <section class="about" id="about-us">
+  <div class="container about__container">
+    <h2 class="about__title">Чому Хатинка Лапок</h2>
+
+    <div class="about__slider">
+      <div class="swiper about-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide about-slide">
+            <div class="about-slide__media">
+              <img
+                class="about-slide__img"
+                src="/temp-rep/assets/slide1@1x-CHK8-1iS.webp"
+                srcset="/temp-rep/assets/slide1@1x-CHK8-1iS.webp 1x, /temp-rep/assets/slide1@2x-C90UVCSm.webp 2x"
+                alt="Жінка годує собаку"
+                width="704"
+                height="404"
+              />
+              <p class="about-slide__text">
+                Все почалося у 2015 році з кількох небайдужих людей та одного
+                врятованого собаки. Сьогодні ми — один з найбільших притулків у
+                регіоні, але наша мета незмінна: дати другий шанс тим, кого
+                зрадили.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide about-slide">
+            <div class="about-slide__media about-slide__media--split">
+              <img
+                class="about-slide__img about-slide__img--split"
+                src="/temp-rep/assets/slide2@1x-1glFMoYr.webp"
+                srcset="/temp-rep/assets/slide2@1x-1glFMoYr.webp 1x, /temp-rep/assets/slide2@2x-DSdm07nW.webp 2x"
+                alt="Пес у дворі"
+                loading="lazy"
+                width="704"
+                height="404"
+              />
+              <p class="about-slide__text">
+                Ми рятуємо, реабілітуємо та знаходимо люблячі родини для
+                безпритульних тварин. Наша мета — не просто дати прихисток, а й
+                забезпечити кожному "хвостику" щасливе та повноцінне життя в
+                новій родині.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide about-slide">
+            <div class="about-slide__media">
+              <img
+                class="about-slide__img about-slide__img--team"
+                src="/temp-rep/assets/slide3@1x-CjneUMoJ.webp"
+                srcset="/temp-rep/assets/slide3@1x-CjneUMoJ.webp 1x, /temp-rep/assets/slide3@2x-_l12Y7lw.webp 2x"
+                alt="Команда з тваринами"
+                loading="lazy"
+                width="704"
+                height="404"
+              />
+              <p class="about-slide__text">
+                "Хатинка Лапок" — це команда професійних ветеринарів, кінологів
+                та десятків волонтерів, які щодня вкладають свою душу та час у
+                турботу про наших підопічних. Ми працюємо 24/7, бо їхнє життя
+                залежить від нас.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide about-slide">
+            <div class="about-slide__media">
+              <img
+                class="about-slide__img"
+                src="/temp-rep/assets/slide4@1x-DIFpo6vr.webp"
+                srcset="/temp-rep/assets/slide4@1x-DIFpo6vr.webp 1x, /temp-rep/assets/slide4@2x-CiRpr_XD.webp 2x"
+                alt="Територія притулку"
+                loading="lazy"
+                width="704"
+                height="404"
+              />
+              <p class="about-slide__text">
+                Ми створили безпечний та комфортний простір. Кожна тварина
+                отримує якісне харчування, своєчасну ветеринарну допомогу,
+                проходить соціалізацію та гуляє на спеціально обладнаних
+                майданчиках.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide about-slide">
+            <div class="about-slide__media">
+              <img
+                class="about-slide__img"
+                src="/temp-rep/assets/slide5@1x-DeEDMO2d.webp"
+                srcset="/temp-rep/assets/slide5@1x-DeEDMO2d.webp 1x, /temp-rep/assets/slide5@2x-D9H4KOjE.webp 2x"
+                alt="Людина обіймає собаку"
+                loading="lazy"
+                width="704"
+                height="404"
+              />
+              <p class="about-slide__text">
+                Ваша допомога — безцінна. Ви можете взяти тваринку додому, стати
+                волонтером, допомогти фінансово або інформаційно. Кожен
+                маленький внесок наближає нас до великої мети — світу без
+                безпритульних тварин.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__controls">
+        <div class="about__pagination"></div>
+
+        <div class="about__buttons">
+          <button
+            class="about__nav about__nav--prev"
+            type="button"
+            aria-label="Попередній слайд"
+          >
+            <svg
+              class="about__nav-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-arrow_back"></use>
+            </svg>
+          </button>
+
+          <button
+            class="about__nav about__nav--next"
+            type="button"
+            aria-label="Наступний слайд"
+          >
+            <svg
+              class="about__nav-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-arrow_forward"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="faq-section" id="faq">
+  <div class="container faq-wrapper">
+    <div class="title-wrapper">
+      <h2 class="faq-title">Все, що ви хотіли знати</h2>
+    </div>
+    <div class="faq-accordion">
+      <!-- 1. Процес усиновлення -->
+      <div class="ac">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span class="faq-question"
+              >Я мрію про пухнастика! Що мені потрібно зробити, щоб забрати
+              хвостика додому?</span
+            >
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-add"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <div class="ac-content">
+            <p>
+              Це чудово, що ви готові подарувати дім одному з наших підопічних!
+              Ми дуже раді будемо вам у цьому допомогти. Процес «усиновлення» у
+              нас простий та зрозумілий:
+            </p>
+            <ol class="accordion-list">
+              <li>
+                Оберіть друга: Придивіться до наших хвостиків у розділі «Знайди
+                друга».
+              </li>
+              <li>
+                Залиште заявку: Коли відчуєте, що це «ваша» тваринка, натискайте
+                кнопку «Взяти додому» та заповніть коротку анкету.
+              </li>
+              <li>
+                Поговоріть з куратором: Наш волонтер зателефонує вам, щоб
+                познайомитись ближче, розповісти про характер тваринки та
+                відповісти на всі ваші питання.
+              </li>
+              <li>
+                Приїжджайте знайомитись: Якщо ви ідеально підходите одне одному,
+                ми домовимось про зустріч у притулку.
+              </li>
+              <li>
+                Дорога додому: Після знайомства та підписання договору про
+                відповідальне утримання, ваш новий друг поїде з вами у своє
+                нове, щасливе життя!
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Підготовка дому -->
+      <div class="ac">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span
+              >Як мені найкраще підготувати свій дім та родину до появи
+              хвостика?</span
+            >
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-add"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <div class="ac-content">
+            <p>
+              Чудове питання, яке показує вашу турботу! Переїзд — це завжди
+              невеликий стрес для тваринки, але правильна підготовка зробить цей
+              процес легким і радісним. Ось кілька порад:
+            </p>
+
+            <ul class="accordion-bullets">
+              <li>
+                Безпечний простір: Переконайтесь, що на вікнах є сітки, а дроти
+                та побутова хімія сховані.
+              </li>
+              <li>
+                Особисті речі: Підготуйте для хвостика дві мисочки (для їжі та
+                води), лежанку чи будиночок, лоток з наповнювачем для котика або
+                повідець і нашийник для собачки.
+              </li>
+              <li>
+                Сімейна розмова: Обговоріть з рідними майбутні обов'язки.
+                Важливо, щоб усі були готові до появи нового мешканця.
+              </li>
+              <li>
+                Терпіння та любов: Дайте тваринці час, щоб звикнути. Не квапте
+                її, будьте поруч, розмовляйте лагідним голосом — і ваша любов
+                творитиме дива!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Щеплення -->
+      <div class="ac">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span
+              >Чи можу я бути впевненим, що тваринка здорова? Розкажіть про
+              щеплення.</span
+            >
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-add"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <div class="ac-content">
+            <p>
+              Так, звісно. Здоров'я наших підопічних — наш головний пріоритет.
+              Кожна тваринка, яка потрапляє до нас, проходить повний огляд у
+              ветеринара. Ми гарантуємо, що:
+            </p>
+            <ul class="accordion-bullets">
+              <li>Усі хвостики оброблені від бліх та глистів.</li>
+              <li>Усі вакциновані комплексною вакциною за віком.</li>
+              <li>
+                Дорослі тварини (зазвичай від 6-8 місяців)
+                стерилізовані/кастровані.
+              </li>
+            </ul>
+            <p>
+              Разом із тваринкою ви обов'язково отримаєте її ветеринарний
+              паспорт з усіма відмітками. Якщо у когось є особливі потреби у
+              догляді чи харчуванні, ми чесно і детально про це розповімо.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Допомога без адопції -->
+      <div class="ac">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span
+              >Я дуже хочу допомогти, але поки не готовий до адопції. Чим я можу
+              підтримати «Хатинку лапок»?</span
+            >
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-add"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <div class="ac-content">
+            <p>
+              Дякуємо вам за велике серце та бажання допомогти! Кожна допомога
+              для нас безцінна. Навіть якщо ви не можете взяти тваринку, ви
+              можете стати її янголом-охоронцем. Ось як:
+            </p>
+            <ul class="accordion-bullets">
+              <li>
+                Допомогти фінансово: Ваша пожертва піде на корм, ліки, оплату
+                комунальних послуг та зарплату персоналу.
+              </li>
+              <li>
+                Стати волонтером: Нам завжди потрібні люблячі руки для
+                прогулянок з собачками, прибирання та, найголовніше, для
+                спілкування з тваринками.
+              </li>
+              <li>
+                Подарувати необхідне: Ми завжди раді кормам, лікам, наповнювачам
+                для лотків, іграшкам, теплим ковдрам.
+              </li>
+              <li>
+                Допомогти <br class="mobile-br" />інформаційно: Найпростіший,
+                але дуже дієвий спосіб — розповідати про нас у соцмережах.
+                Можливо, саме ваш репост допоможе комусь знайти свою долю!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Особисте знайомство -->
+      <div class="ac">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span
+              >Мені сподобалась одна з ваших тваринок на сайті. Чи можу я
+              приїхати, щоб познайомитися з нею особисто?</span
+            >
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-add"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <div class="ac-content">
+            <p>
+              Авжеж! Ми віримо, що справжня магія стається лише при особистій
+              зустрічі. Щоб знайомство було комфортним і для вас, і для
+              тваринки, ми просимо вас спочатку заповнити онлайн-заявку на
+              нашому сайті.
+            </p>
+            <p>
+              Після цього з вами зв'яжеться куратор тваринки, щоб домовитись про
+              зручний час для вашого візиту. Такий підхід дозволяє нам приділити
+              вам максимум уваги та уникнути зайвого стресу для наших
+              підопічних. З нетерпінням чекаємо на знайомство!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="success-stories" id="success-stories">
+  <div class="container">
+    <h2 class="stories-title">Щасливі історії, що надихають</h2>
+
+    <p class="stories-subtitle">
+      Ці хвостики вже знайшли свій дім. Ваш майбутній друг теж чекає на вас
+    </p>
+
+    <!-- slider -->
+    <div class="swiper stories-swiper">
+      <ul class="swiper-wrapper textFedbacks"></ul>
+    </div>
+
+    <!-- controls -->
+    <div class="stories-controls">
+      <!-- pagination LEFT -->
+      <div class="stories-pagination"></div>
+
+      <!-- buttons RIGHT -->
+      <div class="navi-btn">
+        <button type="button" class="stories-btn stories-prev" aria-label="Previous story">
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-arrow_back"></use>
+          </svg>
+        </button>
+
+        <button type="button" class="stories-btn stories-next" aria-label="Next story">
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-arrow_forward"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="footer__container">
+    <a
+      href="./index.html"
+      class="footer__logo-link"
+      aria-label="На головну сторінку"
+    >
+      <svg
+        class="footer__logo"
+        aria-label="Логотип Хатинка лапок"
+        width="302"
+        height="129"
+      >
+        <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-company-Logo"></use>
+      </svg>
+    </a>
+
+    <nav class="footer__nav">
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item">
+          <a href="#about-us" class="footer__nav-link">Про нас</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#pets-list" class="footer__nav-link">Знайти друга</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#faq" class="footer__nav-link">Часті запитання</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#success-stories" class="footer__nav-link">Історії успіху</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__socials">
+      <a
+        href="https://www.facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__social-link"
+        aria-label="Facebook"
+      >
+        <svg class="footer__social-icon" width="32" height="32">
+          <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-facebook"></use>
+        </svg>
+      </a>
+      <a
+        href="https://www.instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__social-link"
+        aria-label="Instagram"
+      >
+        <svg class="footer__social-icon" width="32" height="32">
+          <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </div>
+
+    <div class="footer__copyright">
+      <p>&copy; 2025 Хатинка лапок. Всі права захищені.</p>
+    </div>
+
+    <!-- decorative only -->
+    <img
+      width="130"
+      src="./curious_cat.svg"
+      alt=""
+      class="footer__cat-decor"
+    />
+  </div>
+</footer>
+
+    
+    <div class="backdrop is-hidden" id="form-backdrop">
+  <div class="modal">
+    <button class="modalCloseButton" type="button">
+      <svg class="buttonIcon">
+        <use href="/temp-rep/assets/sprite-DBtBz0EI.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h1 class="modalTitle">Залишіть заявку на знайомство</h1>
+    <form class="form">
+      <label class="formLabel" for="name">Ім’я*</label>
+      <input
+        class="formInput"
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Андрій"
+        maxlength="32"
+        required
+      />
+      <span class="errorText">Error text</span>
+      <label class="formLabel" for="tel">Телефон*</label>
+      <input
+        class="formInput"
+        id="tel"
+        type="tel"
+        name="tel"
+        placeholder="380955559922"
+        pattern="[0-9]{12}"
+        required
+      />
+      <span class="errorText">Error text</span>
+      <label class="formLabel" for="comment">Коментар</label>
+      <textarea
+        class="formTextarea"
+        id="comment"
+        name="comment"
+        placeholder="Напишіть ваш коментар"
+        maxlength="32"
+      ></textarea>
+      <span class="errorText">Error text</span>
+      <button class="formButton" type="submit">Надіслати</button>
+    </form>
+    <span class="loader is-hidden"></span>
+  </div>
+</div>
+
+    <div class="backdrop is-hidden" id="animal-modal-backdrop" data-modal>
+    <div class="modal-container">
+       
+        <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close modal">
+            &times;
+        </button>
+
+        <div class="modal-content" id="modal-content">
+            
+        </div>
+    </div>
+</div>
+
+
+  </body>
+</html>
